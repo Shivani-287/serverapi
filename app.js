@@ -14,7 +14,7 @@ const cors = require('cors')
 
 app.use(
   cors({
-    origin: "https://stunning-kitsune-7aa619.netlify.app", // ✅ correct frontend domain
+    origin: "https://coursebookingsystemitm123.netlify.app", // ✅ correct frontend domain
     credentials: true,
   })
 );

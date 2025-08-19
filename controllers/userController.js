@@ -49,9 +49,14 @@ class userController {
             );
            // console.log(token)
             // send token in 
-            res.cookie("token", token,{
-                httpOnly: true
+           //send token in http-only cookie
+            res.cookie("token", token, {
+                httpOnly: true,     // JS se access na ho
+                secure: true,       // HTTPS par hi allow hoga (production)
+                sameSite: "none",   // cross-site request ke liye zaruri
+                maxAge: 2 * 24 * 60 * 60 * 1000 // 2 din
             });
+            
             res.status(200)
                 .json({
                     message: "login sucessful",
