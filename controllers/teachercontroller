@@ -1,0 +1,4 @@
+const ContactModel = require('../models/contact')
+class contractController {
+    stat
+}
