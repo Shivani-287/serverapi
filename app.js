@@ -10,6 +10,15 @@ const connectDB = require('./db/connectDB')
 const fileUpload = require('express-fileupload')
 const cookieParser = require('cookie-parser')
 require("dotenv").config();
+const cors = require('cors')
+
+app.use(
+  cors({
+    origin: "https://stunning-kitsune-7aa619.netlify.app", // ✅ correct frontend domain
+    credentials: true,
+  })
+);
+
 
 //token get cookie
 app.use(cookieParser())
